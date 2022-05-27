@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>Artwork detail</title>
+</head>
+<body>
+    <header>
+        <h1>Slightly toxic, moderately insane!</h1>
+    </header>
+    <nav class="menu">
+        <ul>
+            <li><a href="/">Main page</a></li>
+            <!--li><a href="/portfolio">My portfolio</a></li-->
+            <li><a href="/playground">Programming playground</a></li>
+            <li><a href="/about_me">About me</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <div class="artwork-detail-piece">
+            <div class="artwork-image-wrapper">
+                <img class="artwork-detail-image" th:src="@{${artwork.photosImagePath}}"/>
+            </div>
+            <div class="art-name-desc">
+                <p class="artwork-name" th:text="${artwork.name}">Artwork name</p>
+                <p th:text="${artwork.description}">Artwork description</p>
+            </div>
+        </div>
+        <a class="delete-artwork" th:href="@{'/delete/' + ${artwork.id}}">Delete this artwork</a>
+    </div>
+</body>
+</html>

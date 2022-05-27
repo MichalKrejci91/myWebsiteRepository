@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>Edit artwork</title>
+</head>
+<body>
+    <a href="/">Home page</a>
+    <h1>Edit artwork</h1>
+    <form action="#" th:action="@{/save}" th:object="${artwork}" method="post" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td>Image</td>
+                <td><img th:src="@{${artwork.photosImagePath}}" style="width: 30vw"/></td>
+                <input type="file" name="image" accept="image/png, image/jpeg" th:field="*{photos}" />
+            </tr>
+
+            <tr>
+                <td>Artwork ID:</td>
+                <td>
+                    <input type="text" th:field="*{id}" readonly="readonly" />
+                </td>
+            </tr>
+            <tr>
+                <td>Artwork Name:</td>
+                <td>
+                    <input type="text" th:field="*{name}" />
+                </td>
+            </tr>
+            <tr>
+                <td>Artwork description:</td>
+                <td><textarea type="text" th:field="*{description}" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Save</button> </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

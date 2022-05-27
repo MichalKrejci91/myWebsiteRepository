@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <!-- Bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <title>Prigramming playground</title>
+</head>
+<body>
+    <header>
+        <h1>Slightly toxic, moderately insane!</h1>
+    </header>
+    <nav class="menu">
+        <ul>
+            <li><a href="/">Main page</a></li>
+            <!--li><a href="/portfolio">My portfolio</a></li-->
+            <li><a href="/playground">Programming playground</a></li>
+            <li><a href="/about_me">About me</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <h2>Playground</h2>
+        <div class="sample-bootstrap-page">
+            <h3>A simple sample Bootstrap page</h3>
+        </div>
+
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+            <li><a tabindex="-1" href="#">Action</a></li>
+            <li><a tabindex="-1" href="#">Another action</a></li>
+            <li><a tabindex="-1" href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a tabindex="-1" href="#">Separated link</a></li>
+        </ul>
+
+        <div class="dropdown">
+            <!-- Link or button to toggle dropdown -->
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+              <li><a tabindex="-1" href="#">Action</a></li>
+              <li><a tabindex="-1" href="#">Another action</a></li>
+              <li><a tabindex="-1" href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a tabindex="-1" href="#">Separated link</a></li>
+            </ul>
+        </div>
+
+        <div class="container-fluid bg-light">
+            <div class="row">
+                <div class="col-3 border bg-success text-white">
+                    A quarter
+                </div>
+                <div class="col-sm-3 border bg-success text-white">
+                    A quarter
+                </div>
+                <div class="col-lg-6 border bg-warning">
+                    One half
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

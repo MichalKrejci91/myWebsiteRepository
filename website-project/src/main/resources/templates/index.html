@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>Main page</title>
+    
+</head>
+<body>
+    <header>
+        <h1>Slightly toxic, moderately insane!</h1>
+    </header>
+    <nav class="menu">
+        <ul>
+            <li><a href="/">Main page</a></li>
+            <!--li><a href="/portfolio">My portfolio</a></li-->
+            <li><a href="/playground">Programming playground</a></li>
+            <li><a href="/about_me">About me</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <h2>Main page</h2>
+        <a class="add-image" href="/new">Add image</a>
+        <ul class="artwork-list">
+            <li th:each="artwork : ${listArtwork}">
+                <div class="artwork-piece">
+                    <div class="artwork-image-wrapper">
+                        <a th:href="@{'/view/' + ${artwork.id}}"><img class="artwork-image" th:src="@{${artwork.photosImagePath}}"/></a>
+                    </div>
+                    <div class="art-name-desc">
+                        <p class="artwork-name" th:text="${artwork.name}">Artwork name</p>
+                        <p th:text="${artwork.description}">Artwork description</p>
+                    </div>
+                </div>  
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

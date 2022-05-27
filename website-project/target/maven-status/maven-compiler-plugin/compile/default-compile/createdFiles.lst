@@ -1,0 +1,5 @@
+com\sslithranox\entity\Artwork.class
+com\sslithranox\MainApplication.class
+com\sslithranox\service\ArtworkService.class
+com\sslithranox\repository\ArtworkRepository.class
+com\sslithranox\controller\MainController.class

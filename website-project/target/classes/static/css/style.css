@@ -1,0 +1,151 @@
+body{
+    background-color: #424242;
+    font-family: "Calibri";
+    margin:0% !important;
+    padding: 0% !important;
+    color: white;
+}
+
+header{
+    background-color: black;
+    margin: 0px;
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+    margin-top: 0;
+}
+
+h1, h2{
+    color: #93ed93;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.add-image a:hover{
+    color: #93ed93;
+}
+
+.add-image{
+    margin-bottom: 5vw;
+}
+
+.menu ul, .artwork-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul{
+    background-color: #212121;
+}
+
+.menu ul li{
+    font-size: 1em;
+}
+
+.menu ul li:hover{
+    background-color: rgba(206, 194, 194, 0.1);
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+@media (min-width: 600px){
+    header{
+        height: 2.5em;
+    }
+    
+    .menu ul {
+        width: 100%;
+        background-color: #212121;
+        text-align: center;
+    }
+    
+    .menu ul li{
+        display: inline-block;
+        margin: auto;
+        width: auto;
+        padding: 0.5vw 5vw;
+    }
+
+    .content{
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .about-me-image{
+        width: 20vw;
+        float: left;
+    }
+
+    .artwork-image{
+        width: 40vw;
+    }
+
+    .artwork-piece{
+        margin-bottom: 5vw;
+        display: flex;
+    }
+
+    .artwork-detail-image{
+        width: 70vw;
+    }
+}
+
+@media (max-width: 599px){
+    .about-me-image{
+        display: none;
+    }
+
+    .artwork-image{
+        width: 100vw;
+    }
+
+    .artwork-detail-image{
+        width: 100vw;
+    }
+
+    .artwork-piece{
+        margin-bottom: 15vw;
+    }
+}
+
+.sample-bootstrap-page{
+    background-color: white;
+}
+
+.about-me, .about-page{
+    width: 85%;
+    justify-content: center;
+    margin: auto;
+}
+
+.art-name-desc{
+    justify-content: center;
+    width: 50vw;
+}
+
+.artwork-name{
+    font-size: 2rem;
+    justify-content: center;
+}
+
+.artwork-detail-piece{
+    margin-top: 5vw;
+}
+
+.delete-artwork:hover{
+    color:red;
+}
+
+
+
+

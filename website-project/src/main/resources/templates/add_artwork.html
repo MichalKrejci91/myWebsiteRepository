@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>Add new artwork</title>
+</head>
+<body>
+    <header>
+        <h1>Slightly toxic, moderately insane!</h1>
+    </header>
+    <nav class="menu">
+        <ul>
+            <li><a href="/">Main page</a></li>
+            <!--li><a href="/portfolio">My portfolio</a></li-->
+            <li><a href="/playground">Programming playground</a></li>
+            <li><a href="/about_me">About me</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <h2>Add new artwork</h2>
+        <form action="#" th:action="@{/save}" th:object="${artwork}" method="post" enctype="multipart/form-data">
+            <table border="0" cellpadding="10">
+                <tr>
+                    <label>Image: </label>
+                    <input type="file" name="image" accept="image/png, image/jpeg" />
+                </tr>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" th:field="*{name}" /></td>
+                </tr>
+                <tr>
+                    <td>Description:</td>
+                    <td><textarea type="text" th:field="*{description}" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button type="submit">Submit art</button> </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
